@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>10.16作业</title>
+	<meta name="viewport" content="width=device-width,minimum-scale=0.5,maximum-scale=1.0,initial-scale=0.5,user-scalable=no" />
+	<style>
+		*{margin: 0px; padding: 0px;}
+		.outer{width: 640px; margin: 0px auto; background: url(images/bg.jpg) 0 0 no-repeat; 
+				background-size: 100% 100%; position: relative; overflow: hidden;
+		}
+		.girl{width: 640px; height: 608px; background-image: url(images/shang.png); background-position: 75px -110px; background-repeat: no-repeat; -webkit-animation: girlrun 3s linear; -ms-animation: girlrun 3s linear; -o-animation: girlrun 3s linear; animation: girlrun 3s linear;}
+		.girl h1{text-align: center; padding-top: 323px; color: #0066cc; font-weight: bold; font-family: "微软雅黑"; /* text-shadow: 0px 0px 1px #ffff00,0px 0px 2px #ffff00,0px 0px 3px #ffff00,0px 0px 4px #ffff00,0px 0px 5px #ffff00,0px 0px 6px #ffff00; */ -webkit-text-stroke: 2px #ffff00; font-size: 28px; }
+		.girl h1 span{font-size: 36px;}
+		.boy{width: 640px; height:281px; background-image: url(images/xia.png); background-position: 20px 0px; background-repeat: no-repeat; -webkit-animation: boyrun 3s linear; -ms-animation: boyrun 3s linear; -o-animation: boyrun 3s linear; animation: boyrun 3s linear;}
+		.bot{width: 640px; height: 80px; background: url(images/bot.jpg) 0 0 no-repeat;}
+		h4{text-align: center; color: #006699; font-size: 20px; padding: 10px;}
+		.hihao{position: absolute; left: 3px; top: 40px; -webkit-animation: nihaorun 3s 3s linear; -ms-animation: nihaorun 3s 3s linear; -o-animation: nihaorun 3s 3s linear; animation: nihaorun 3s 3s linear;}
+		.bu{position: absolute; left: 186px; top: 131px; -webkit-animation: burun 3s 9s linear; -ms-animation: burun 3s 9s linear; -o-animation: burun 3s 9s linear; animation: burun 3s 9s linear;}
+		.zhaodiao{position: absolute; width: 310px; height:197px; left: 329px; top: 40px; background: url(images/t3.png) 0 0 no-repeat; -webkit-animation: zhaodiaorun 3s 6s linear; -ms-animation: zhaodiaorun 3s 6s linear; -o-animation: zhaodiaorun 3s 6s linear; animation: zhaodiaorun 3s 6s linear;}
+		.zhaodiao img{position: absolute; left: 50px; top: 91px; -webkit-animation: scale 1s 12s infinite; -ms-animation: scale 1s 12s infinite; -o-animation: scale 1s 12s infinite; animation: scale 1s 12s infinite;}
+		@-webkit-keyframes girlrun{
+			0%{background-position: 75px -608px; opacity: 0;}
+			100%{background-position: 75px -101px; opacity: 1;}
+		}
+		@-ms-keyframes girlrun{
+			0%{background-position: 75px -608px; opacity: 0;}
+			100%{background-position: 75px -101px; opacity: 1;}
+		}
+		@-o-keyframes girlrun{
+			0%{background-position: 75px -608px; opacity: 0;}
+			100%{background-position: 75px -101px; opacity: 1;}
+		}
+		@keyframes girlrun{
+			0%{background-position: 75px -608px; opacity: 0;}
+			100%{background-position: 75px -101px; opacity: 1;}
+		}
+		@-webkit-keyframes boyrun{
+			0%{background-position: 20px 281px; opacity: 0;}
+			100%{background-position: 20px 0px; opacity: 1;}
+		}
+		@-ms-keyframes boyrun{
+			0%{background-position: 20px 281px; opacity: 0;}
+			100%{background-position: 20px 0px; opacity: 1;}
+		}
+		@-o-keyframes boyrun{
+			0%{background-position: 20px 281px; opacity: 0;}
+			100%{background-position: 20px 0px; opacity: 1;}
+		}
+		@keyframes boyrun{
+			0%{background-position: 20px 281px; opacity: 0;}
+			100%{background-position: 20px 0px; opacity: 1;}
+		}
+		@-webkit-keyframes nihaorun{
+			0%{left: 0px; top: 0px; }
+			66%{left: 200px; top: 500px;}
+			10%{left: 3px; top: 40px;}
+		}
+		@-ms-keyframes nihaorun{
+			0%{left: 0px; top: 0px; }
+			66%{left: 200px; top: 500px;}
+			10%{left: 3px; top: 40px;}
+		}
+		@-o-keyframes nihaorun{
+			0%{left: 0px; top: 0px; }
+			66%{left: 200px; top: 500px;}
+			10%{left: 3px; top: 40px;}
+		}
+		@keyframes nihaorun{
+			0%{left: 0px; top: 0px; }
+			66%{left: 200px; top: 500px;}
+			10%{left: 3px; top: 40px;}
+		}
+		@-webkit-keyframes zhaodiaorun{
+			0%{left: 0px; top: 0px; }
+			33%{left: 329px; top: 40px;}
+			66%{left: 58px; top: 400px;}
+			10%{left: 329px; top: 40px;}
+		}
+		@-ms-keyframes zhaodiaorun{
+			0%{left: 0px; top: 0px; }
+			33%{left: 329px; top: 40px;}
+			66%{left: 58px; top: 400px;}
+			10%{left: 329px; top: 40px;}
+		}
+		@-o-keyframes zhaodiaorun{
+			0%{left: 0px; top: 0px; }
+			33%{left: 329px; top: 40px;}
+			66%{left: 58px; top: 400px;}
+			10%{left: 329px; top: 40px;}
+		}
+		@keyframes zhaodiaorun{
+			0%{left: 0px; top: 0px; }
+			33%{left: 329px; top: 40px;}
+			66%{left: 58px; top: 400px;}
+			10%{left: 329px; top: 40px;}
+		}
+		@-webkit-keyframes burun{
+			0%{left: 186px; top: 0px; -webkit-transform: rotateX(0deg);}
+			33%{left: 186px; top: 300px; -webkit-transform: rotateY(360deg);}
+			66%{left: 186px; top: 20px; -webkit-transform: rotateX(180deg);}
+			10%{left: 186px; top: 131px; -webkit-transform: rotateY(0deg);}
+		}
+		@-ms-keyframes burun{
+			0%{left: 186px; top: 0px; -ms-transform: rotateX(0deg);}
+			33%{left: 186px; top: 300px; -ms-transform: rotateX(360deg);}
+			66%{left: 186px; top: 20px; -ms-transform: rotateX(180deg);}
+			10%{left: 186px; top: 131px; -ms-transform: rotateX(0deg);}
+		}
+		@-o-keyframes burun{
+			0%{left: 186px; top: 0px; }
+			33%{left: 186px; top: 300px;}
+			66%{left: 186px; top: 20px;}
+			10%{left: 186px; top: 131px;}
+		}
+		@keyframes burun{
+			0%{left: 186px; top: 0px; transform: rotateX(0deg);}
+			33%{left: 186px; top: 300px; transform: rotateX(360deg);}
+			66%{left: 186px; top: 20px; transform: rotateX(180deg);}
+			10%{left: 186px; top: 131px; transform: rotateX(0deg);}
+		}
+		@-webkit-keyframes scale{
+			0%{-webkit-transform:scale(0.8)}
+			100%{-webkit-transform:scale(1.2)}
+		}
+		@-ms-keyframes scale{
+			0%{-ms-transform:scale(0.8)}
+			100%{-ms-transform:scale(1.2)}
+		}
+		@-o-keyframes scale{
+			0%{-o-transform:scale(0.8)}
+			100%{-o-transform:scale(1.2)}
+		}
+		@keyframes scale{
+			0%{transform:scale(0.8)}
+			100%{transform:scale(1.2)}
+		}
+	</style>
+</head>
+<body>
+	<div class="outer">
+		<div class="girl">
+			<h1>我的青春<span>不着调</span>&nbsp;&nbsp;&nbsp;换张名片<span>多关照</span></h1>
+		</div>
+		<h4>是型男还是萌妹，选择卡片开始制作吧</h4>
+		<div class="boy"></div>
+		<div class="bot"></div>
+		<img src="images/t1.png" alt="" class="hihao">
+		<img src="images/t2.png" alt="" class="bu">
+		<div class="zhaodiao">
+			<img src="images/t4.png" alt="">
+		</div>
+	</div>
+</body>
+<script src="jquery.js"></script>
+<script src="ort.js"></script>	
+</html>
